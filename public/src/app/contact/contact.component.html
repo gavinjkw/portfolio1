@@ -1,0 +1,80 @@
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Oswald&display=swap" rel="stylesheet">
+
+<div class="container-contact">
+
+  <img src="/assets/mail.png" height='125px' width='125px' alt="Contact Me">
+
+  <p class="note">If you would like to get in touch, feel free to send me a note below. I will try to get back to you as
+    soon as
+    possible!</p>
+
+  <form [formGroup]="contactForm" class="contact-form" (submit)="submitFormData()" novalidate>
+
+
+
+
+
+    <div class="form-group names col">
+      <label class="block">First Name:</label>
+      <input class="form-control form-input-top form-input left-side-name" formControlName="firstName" type="text">
+
+      <div
+        *ngIf="contactForm.controls['firstName'].invalid && (contactForm.controls['firstName'].dirty || contactForm.controls['firstName'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="contactForm.controls['firstName'].errors.required">
+          <p class="error-message">First Name is required</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group names col">
+      <label class="block">Last Name:</label>
+      <input id="right-side-name form-control form-input" class="form-control form-input-top form-input" formControlName="lastName"
+        type="text">
+
+      <div
+        *ngIf="contactForm.controls['lastName'].invalid && (contactForm.controls['lastName'].dirty || contactForm.controls['lastName'].touched)"
+        class="alert alert-danger">
+        <div *ngIf="contactForm.controls['lastName'].errors.required">
+          <p class="error-message">Last Name is required</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="block">Email Address:</label>
+      <input class="form-control form-input" formControlName="email" type="text">
+    </div>
+    <div
+      *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)"
+      class="alert alert-danger">
+      <div *ngIf="contactForm.controls['email'].errors.required">
+        <p class="error-message">Email is required</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="block">Message:</label>
+      <textarea class="form-control" id="message-input" formControlName="message" type="text"></textarea>
+    </div>
+    <div
+      *ngIf="contactForm.controls['message'].invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)"
+      class="alert alert-danger">
+      <div *ngIf="contactForm.controls['message'].errors.required">
+        <p class="error-message">Message is required</p>
+      </div>
+    </div>
+
+
+    <button type="submit" [disabled]="contactForm.pristine || contactForm.invalid" class="btn btn-success">
+      Submit
+    </button>
+  </form>
+
+  <p class="thankYou">{{ thankYou }} </p>
+
+</div>

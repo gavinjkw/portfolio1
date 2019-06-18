@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Oswald&display=swap" rel="stylesheet">
+<div class="container-portfolio">
+  <h3>Projects</h3>
+  <div class="row">
+    <div class="col s12 m4 l4">
+      <h5 class="title">Livable</h5>
+      <img class="portfolio-picture" src="assets/livable3.png" alt="Livable" height="400px" width="90%">
+      <a href="http://www.livableroomates.com">www.livableroomates.com</a>
+      <p class="project-info">(technologies used: Java, Spring Boot, MySQL, HTML5, CSS, Materialize)
+        A platform for people living with roommates. Users are able to create a house and
+        utilize a chat area, bill management, and event postings. Users can create a new house, or join a house with an
+        access code.
+      </p>
+      <button id="next-btn" (click)="changeVideo('livable')">Quick Video - Livable</button>
+
+    </div>
+    <div class="col s12 m4 l4">
+      <h5 class="title">Snow Trades</h5><img class="portfolio-picture" src="assets/snow_trades.png" height="400px" width="91%"
+        alt="Snow Trades">
+      <a href="http://www.snowtrades.com">www.snowtrades.com</a>
+      <p class="project-info">(technologies used: Python, Django, MySQL, HTML5, CSS, Bootstrap, Stripe API)
+        A marketplace for used snow equipment where users can upload items for sale.
+        Stripe has been integrated into the site, and users are able to upload pictures for
+        item postings. An admin portal allows for control over the site and removal of users
+        and items.
+      </p>
+      <button id="next-btn" (click)="changeVideo('snowTrades')">Quick Video - Snow Trades</button>
+    </div>
+    <div class="col s12 m4 l4">
+      <h5 class="title">Game of Thrones Game</h5><img class="portfolio-picture" src="assets/got_game.png" height="400px" width="95%"
+        alt="Game of Thrones Game">
+      <a href="http://www.thegotgame.com">www.theGoTgame.com</a>
+      <p class="project-info">(technologies used: Java, Spring Boot, MySQL, HTML5, CSS, Bootstrap)
+        A Game of Thrones predication game where users submit guesses as to character
+        outcomes. The user was able to make an account and submit their guesses. Once
+        submitted, they were able to view other players guesses. Each week the moderator
+        used the admin portal to update the character statuses, which automatically
+        updated the player’s scores.
+      </p>
+      <button class="button" id="next-btn" (click)="changeVideo('gotGame')">Quick Video - GoT Game</button>
+    </div>
+  </div>
+
+  <iframe *ngIf="video === 'livable'" width="800" height="600" src="https://youtube.com/embed/QusRQqNKZFY">
+  </iframe>
+
+  <iframe *ngIf="video === 'snowTrades'" width="800" height="600" src="https://youtube.com/embed/iZPKShj3krA">
+  </iframe>
+
+  <iframe *ngIf="video === 'gotGame'" width="800" height="600" src="https://youtube.com/embed/JKYiSoLMcY0">
+  </iframe>
+  <hr>
+  <div>
+    <a routerLink="/contact" routerLinkActive="active"><button id="next-btn">Contact Me</button></a>
+  </div>
+</div>
