@@ -17,6 +17,10 @@
     font-family: 'Oswald', cursive, sans-serif;
 }
 
+.portfolio-picture {
+  border-radius: 10px;
+}
+
 #next-btn {
   -moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
   -webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
@@ -87,6 +91,10 @@
       box-shadow: 0px -5px 33px -5px rgba(0,0,0,0.75);
       font-family: 'Oswald', cursive, sans-serif;
   }
+
+  .portfolio-picture {
+    border-radius: 10px;
+}
   
   #next-btn {
     -moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
@@ -145,12 +153,10 @@
     /* Large Screen */
 
     @media only screen and (min-width: 1100px){
-        .livable-picture {
-            width: 400px;
-            height: 600px;
+        .portfolio-picture {
+            border-radius: 10px;
         }
       
-
       #lower-section {
           padding-bottom: 60px !important;
       }

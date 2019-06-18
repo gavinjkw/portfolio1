@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from './http.service';
-import { Router, RouterOutlet } from "@angular/router";
+import { Router, RouterOutlet, NavigationEnd } from "@angular/router";
 import { slideInAnimation } from './animations';
 import { Title } from '@angular/platform-browser';
 
@@ -21,7 +21,14 @@ export class AppComponent implements OnInit {
   constructor(private _httpService: HttpService, private router: Router, private titleService: Title) { }
 
   ngOnInit() {
-    this.titleService.setTitle("Gavin Wilson - Home")
+    this.titleService.setTitle("Gavin Wilson - Home");
+
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
   }
 
   public setTitle( newTitle: string) {
