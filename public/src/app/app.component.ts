@@ -21,11 +21,11 @@ export class AppComponent implements OnInit {
   constructor(private _httpService: HttpService, private router: Router, private titleService: Title) { }
 
   ngOnInit() {
-
+    this.titleService.setTitle("Gavin Wilson - Home")
   }
 
   public setTitle( newTitle: string) {
-    this.titleService.setTitle( "Gavin Wilson" );
+    this.titleService.setTitle( newTitle );
   }
 
   prepareRoute(outlet: RouterOutlet) {

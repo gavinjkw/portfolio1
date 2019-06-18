@@ -107,7 +107,7 @@ body {
         height: 800px;
         color: black;
         text-align: center;
-        font-family: 'Titillium Web', sans-serif;
+        font-family: 'Oswald', cursive;
         font-size: 50px;
         margin: 0 auto;
         width: 100%;
@@ -120,7 +120,7 @@ body {
     .title-name {
         font-size: 75px;
         text-align: center;
-        font-family: 'Alfa Slab One', cursive;
+        font-family: 'Oswald', cursive;
         color: rgb(250, 246, 246);
         padding: 30% 0 0% 2%;
         margin: 0;
@@ -130,7 +130,7 @@ body {
     .title-dev {
         font-size: 40px;
         text-align: center;
-        font-family: 'Indie Flower', cursive, sans-serif;
+        font-family: 'Oswald', cursive;
         color: rgb(250, 246, 246);
         padding: 6% 0 0% 2%;
         margin: 0;
@@ -163,7 +163,7 @@ body {
         display:inline-block;
         cursor:pointer;
         color:#ffffff;
-        font-family: 'Indie Flower', cursive, sans-serif;
+        font-family: 'Oswald', cursive;
         font-size:20px;
         font-weight:bold;
         padding:11px 23px;

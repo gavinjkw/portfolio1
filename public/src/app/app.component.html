@@ -2,19 +2,16 @@
 <div [@routeAnimations]="prepareRoute(outlet)" class="container-main">
 
     <ul >
-        <li> <a id="menu-item" routerLink="" routerLinkActive="active">Gavin Wilson</a></li>
-        <li> <a id="menu-item" routerLink="about" routerLinkActive="active">About</a></li>
-        <li> <a id="menu-item" routerLink="portfolio" routerLinkActive="active">Portfolio</a></li>
-        <li> <a id="menu-item" routerLink="contact" routerLinkActive="active">Contact</a></li>
+        <li> <a  (click)="titleService.setTitle('Gavin Wilson - Home')" id="menu-item" routerLink="" routerLinkActive="active">Gavin Wilson</a></li>
+        <li> <a (click)="titleService.setTitle('Gavin Wilson - About Me')" id="menu-item" routerLink="about" routerLinkActive="active">About</a></li>
+        <li> <a (click)="titleService.setTitle('Gavin Wilson - Portfolio')" id="menu-item" routerLink="portfolio" routerLinkActive="active">Portfolio</a></li>
+        <li> <a (click)="titleService.setTitle('Gavin Wilson - Contact')" id="menu-item" routerLink="contact" routerLinkActive="active">Contact</a></li>
         <ul class="right-side-nav">
             <li> <a id="pic-link" href="https://docs.google.com/document/d/1vcjrJoKRdd7Jo3xTrkZKOhc8XxGJ4cRZF7m5H8YAtYw/edit?usp=sharing"><img id="nav-item" src="/assets/nav-items-bucket/resume.png" alt="Resume"></a></li>
             <li><a id="pic-link" href="https://www.github.com/gavinjkw"><img id="nav-item" src="/assets/nav-items-bucket/git.png" alt="Git"></a></li>
             <li><a id="pic-link" href="https://www.linkedin.com/in/gavin-j-wilson" alt="In"><img id="nav-item" src="/assets/nav-items-bucket/in.png" alt="LinkedIn"></a></li>
         </ul>
     </ul>
-
-
-
     <router-outlet #outlet="outlet"></router-outlet>
 
 </div>
